@@ -47,7 +47,7 @@ header {
 header menu {
   max-width: 900px;
   margin: 15px 0 0 330px;
-  padding: 0;
+  padding: 14px 0 0 0;
   font-size: 18px;
 }
 header menu li {
@@ -405,7 +405,7 @@ abbr {
   position: relative;
   z-index: 30;
   max-width: 1000px;
-  margin-left: 20px;
+  margin: -40px 0 0 20px;
 
   &:after {
     content: '';
