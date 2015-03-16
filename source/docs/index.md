@@ -1,8 +1,6 @@
 ---
 title: Документация ББК
 
-toc_footers:
-
 includes:
     - intro
     - concept
