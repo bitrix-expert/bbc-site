@@ -847,7 +847,7 @@
             if(elem.parent().is(headerClass)) {
 
                 // Hides all non-active sub-headers
-                self.hide($(subheaderClass).not(elem));
+                self.hide($(subheaderClass + '[data-tag="3"]').not(elem));
 
             }
 
@@ -855,7 +855,7 @@
             else {
 
                 // Hides all non-active sub-headers
-                self.hide($(subheaderClass).not(elem.closest(headerClass).find(subheaderClass).not(elem.siblings())));
+                self.hide($(subheaderClass + '[data-tag="3"]').not(elem.closest(headerClass).find(subheaderClass + '[data-tag="3"]').not(elem.siblings())));
 
             }
 

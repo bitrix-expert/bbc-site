@@ -40,50 +40,52 @@ html, body {
 
 header {
   position: relative;
-  height: $header-height;
+  min-height: $header-height;
   background-color: $nav-bg;
-  border-bottom: 1px #E4E4E4 solid;
+  border-bottom: 1px #F0F0F0 solid;
 }
 header menu {
-  max-width: 900px;
+  max-width: 1040px;
   margin: 15px 0 0 330px;
   padding: 14px 0 0 0;
   font-size: 18px;
-}
-header menu li {
-  float: left;
-  margin-right: 9%;
-  list-style-type: none;
-}
-header menu li:last-child {
-//  float: right;
-}
-header menu li a {
-  text-decoration: none;
-}
 
-header a, a u {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-color: inherit;
-}
-header a {
-  color: #5D9ECA;
-  border-color: #0060a0;
-  border-color: rgba(0, 96, 160, 0.2);
-}
-header a[disabled] {
-  color: #0060a0 !important;
-}
-header a:active {
-  color: #e05020;
-  border-color: #e05020;
-  border-color: rgba(224, 80, 32, 0.2);
-}
-header a:hover, a.hover {
-  color: #e05020;
-  border-color: #e05020;
-  border-color: rgba(224, 80, 32, 0.9);
+  li {
+    float: left;
+    margin: 0 9% 10px 0;
+    list-style-type: none;
+  }
+  li a {
+    text-decoration: none;
+  }
+  li:last-child {
+    float: right;
+  }
+
+  a, a u {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: inherit;
+  }
+
+  a {
+    color: #5D9ECA;
+    border-color: #0060a0;
+    border-color: rgba(0, 96, 160, 0.2);
+  }
+  a[disabled] {
+    color: #0060a0 !important;
+  }
+  a:active {
+    color: #e05020;
+    border-color: #e05020;
+    border-color: rgba(224, 80, 32, 0.2);
+  }
+  a:hover, a.hover {
+    color: #e05020;
+    border-color: #e05020;
+    border-color: rgba(224, 80, 32, 0.9);
+  }
 }
 
 abbr {
@@ -130,7 +132,7 @@ abbr {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  border-right: 1px #E4E4E4 solid;
+  border-right: 1px #F0F0F0 solid;
   font-size: 13px;
   font-weight: bold;
 
@@ -229,7 +231,7 @@ abbr {
   // styling of an unordered list because it is ugly.
   ul, li {
     list-style: none;
-    margin: 0;
+//    margin: 0;
     padding: 0;
     line-height: 28px;
   }
@@ -252,23 +254,39 @@ abbr {
     /*color: $nav-active-text;*/
   }
 
+  .tocify-header {
+    font-size: 16px;
+  }
+
   // Subheaders are the submenus that slide open
   // in the table of contents.
   .tocify-subheader {
-    display: none; // tocify will override this when needed
+//    display: none; // tocify will override this when needed
     /*background-color: $nav-subitem-bg;*/
     font-weight: 500;
     .tocify-item>a {
-      margin-bottom: 9px;
       padding-left: $nav-padding + $nav-indent;
       font-size: 13px;
       line-height: 20px;
+    }
+
+    li {
+      margin: 5px 0 5px 0;
+      padding: 1px 0 1px 10px;
     }
 
     // for embossed look:
     /*@include embossed-bg;*/
     &>li:last-child {
       box-shadow: none; // otherwise it'll overflow out of the subheader
+    }
+  }
+
+  .tocify-subheader[data-tag="3"] {
+    li {
+      display: none;
+      margin: 0;
+      padding-left: 35px;
     }
   }
 
@@ -508,16 +526,16 @@ abbr {
       padding: 10px;
     }
 
-    tr:last-child {
+    /*tr:last-child {
       border-bottom: 1px solid #ccc;
-    }
+    }*/
 
     tr:nth-child(odd)>td {
       background-color: lighten($main-bg,4.2%);
     }
 
     tr:nth-child(even)>td {
-      background-color: lighten($main-bg,2.4%);
+      background-color: #EFEADE;
     }
   }
 
@@ -541,7 +559,7 @@ abbr {
   code {
     /*background-color: rgba(0,0,0,0.05);*/
     padding: 3px;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     @extend %break-words;
     @extend %code-font;
   }
@@ -607,7 +625,7 @@ abbr {
 .content {
   pre, blockquote {
     background-color: $code-bg;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     /*color: #fff;*/
 
     padding: 2em $main-padding;
@@ -638,7 +656,7 @@ abbr {
   blockquote {
     &>p {
       background-color: $code-annotation-bg;
-      border-radius: 5px;
+      /*border-radius: 5px;*/
       padding: $code-annotation-padding;
       color: #ccc;
       border-top: 1px solid #000;
@@ -667,6 +685,9 @@ code.prettyprint {
 
 .highlight .cp {
   color: #646464;
+}
+.highlight .c1 {
+  color: #A0A0A0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -699,6 +720,10 @@ code.prettyprint {
   .tocify-wrapper .tocify-item > a {
     padding-top: 0.3em;
     padding-bottom: 0.3em;
+  }
+
+  header menu li:last-child {
+    float: left;
   }
 }
 
