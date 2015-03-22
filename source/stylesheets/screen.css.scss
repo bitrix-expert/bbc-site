@@ -283,8 +283,9 @@ abbr {
   }
 
   .tocify-subheader[data-tag="3"] {
+    display: none;
+
     li {
-      display: none;
       margin: 0;
       padding-left: 35px;
     }

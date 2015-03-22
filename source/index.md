@@ -5,7 +5,7 @@ title: Базовые битриксовые компоненты
 
 toc_footers:
     - <h1>Базовые<br>битриксовые<br>компоненты</h1>
-    - <div class="info_block"><a href="https://github.com/niksamokhvalov/Bitrix-basis-components"><div class="github"></div></a>
+    - <div class="info_block"><a href="https://github.com/niksamokhvalov/bbc"><div class="github"></div></a>
           <p class="requirements">
               <span title="ПХП не ниже версии 5.4.0">
                   <span class="name">ПХП</span> <span class="version">5.4.0</span>
