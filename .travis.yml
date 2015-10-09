@@ -7,3 +7,6 @@ rvm:
   - 2.0.0
 
 cache: bundler
+
+after_deploy:
+  - git clone git@github.com:bitrix-expert/bbc-docs.git source/includes
