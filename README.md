@@ -1,1 +1,1 @@
-Powered by [Slate] (https://github.com/tripit/slate)
+Website of the [BBC](https://github.com/bitrix-expert/bbc). Powered by [Slate] (https://github.com/tripit/slate).
