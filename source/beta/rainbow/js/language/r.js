@@ -75,7 +75,7 @@ Rainbow.extend('r', [
 
     /*
      * Note that we would perhaps match more builtin functions and
-     * variables, but there are so many that most are ommitted for now.
+     * variables, but there are so many that most are omitted for now.
      * See ?builtins for more info.
      *
      * @todo: Fix the case where we have a function like tmp.logical().
